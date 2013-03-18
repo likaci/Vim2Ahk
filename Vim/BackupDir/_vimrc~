@@ -1,0 +1,503 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+" Last Change:  2013-03-18 17:02:13
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 编码
+	source $VIMRUNTIME/vimrc_example.vim
+	source $VIMRUNTIME/mswin.vim
+	behave mswin
+	" 文件编码
+	set encoding=utf-8 
+	set termencoding=utf-8 
+	set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
+	" vim的菜单乱码
+	source $VIMRUNTIME/delmenu.vim 
+	source $VIMRUNTIME/menu.vim 
+	" vim提示信息乱码
+	language messages zh_CN.utf-8
+	" 自动编码
+	let g:fencview_autodetect = 1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"插件管理
+	"call pathogen#infect() 不再使用 
+	set nocompatible
+	filetype off
+	set rtp+=$vim/vimfiles/bundle/vundle/
+	call vundle#rc('$VIM/vimfiles/bundle/')
+	Bundle 'gmarik/vundle'
+	Bundle 'Powerline'
+	Bundle 'taglist'
+	Bundle 'FencView.vim'
+	Bundle 'surround.vim'
+	Bundle 'winmanager'
+	Bundle 'bufexplorer.zip'
+	Bundle 'Indent-Guides'
+	Bundle 'EasyMotion'
+	Bundle 'AutoComplPop'
+	Bundle 'ColorSchemeExplorer'
+	Bundle 'better-snipmate-snippet'
+	Bundle 'AhkSIDE'
+	"Bundle 'TinyBufferExplorer'
+	"Bundle 'vimshell-ssh'
+	"Bundle 'Shougo/neocomplcache'
+	"Bundle 'The-NERD-tree'
+	"Bundle 'Tagbar'
+	"Bundle 'HiColors'
+	"Bundle 'ColorSchemeMenuMaker'
+	"Bundle 'Yggdroot/indentLine' 
+	"Bundle 'vimim/vimim' 
+	"Bundle 'superSnipMate'
+	"Bundle 'snipMate'
+	"Bundle 'vim-htmldjango_omnicomplete'
+	"Bundle 'XQuery-indentomnicompleteftplugin'
+	"Bundle 'vimomni'
+	"Bundle 'OmniTags'
+	"Bundle 'neocomplcache-snippets_complete'
+	"Bundle 'ahkcomplete'
+	"Bundle 'neocomplcache'
+	filetype plugin indent on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"插件设置
+let g:AhkSIDE_AhkChm = 'd:\AutoHotKeyL\AutoHotkey.chm'
+let g:AhkSIDE_AhkExe = 'd:\AutoHotKeyL\AutoHotkeyA32.exe'
+let g:AhkSIDE_hk_i_ShowHints ='<F1>'
+let g:AhkSIDE_hk_in_Help = '!F1'
+let tlist_autohotkey_settings = 'autohotkey;k:Hotkeys;s:Hotstrings;l:Label;f:Function;v:Variable;n:note;t:Todo'
+autocmd BufRead,Bufnewfile *.ahk map <F7> :silent !"D:\AutoHotKeyL\Compiler\Ahk2Exe.exe" /in % <CR>
+"let g:acp_behaviorSnipmateLength = "1"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"按键映射
+	let mapleader = ","
+	imap jj <esc>
+	map <leader>h :h 
+	map <silent> <leader>e :call SwitchToBuf("$vim/_vimrc")<cr>
+	map <silent> <leader>s :source $vim/_vimrc<cr>
+	map <silent> <leader>d :NERDTreeToggle<cr>
+	map <silent> <leader>is :BundleSearch<cr>
+	map <silent> <leader>ii :BundleInstall<cr>
+	map <silent> <leader>iu :BundleUpdate<cr>
+	map <silent> <leader>t :TlistToggle<cr>
+	" 移动
+		imap <M-h> <Left>
+		imap <M-j> <Down>
+		imap <M-k> <Up>
+		imap <M-l> <Right>
+		cmap <M-h> <S-Left>
+		cmap <M-j> <Left>
+		cmap <M-k> <Right>
+		cmap <M-l> <S-Right>
+		cmap <c-j> <Down>
+		cmap <c-k> <Up>
+	" 编译运行 
+		map <F5> :make<CR>
+		imap <F5> <ESC><F5><CR>
+		imap <F7> <ESC><F7>
+	" 窗口切换
+		map <silent> <leader>n <c-w><c-w> 
+		map <silent> 		gn :tabnext<CR>
+	" 新建
+		map <silent> <leader>b :vnew<CR>
+		map <silent>		gb :tabnew<CR>
+	" 关闭
+		map <silent> <leader>c :close<CR>
+		map <silent> 		gc :tabclose<CR>
+		map <silent> <leader>o :onl<CR>
+		map <silent> 		go :tabonl<CR>
+	" 保存
+		nmap <silent> <leader>ww :w<cr>
+		nmap <silent> <leader>wf :w!<cr>
+	" 退出 
+		nmap <silent> <leader>qw :wq<cr>
+		nmap <silent> <leader>qf :q!<cr>
+		nmap <silent> <leader>qq :q<cr>
+		nmap <silent> <leader>qa :qa<cr>
+	" 关闭高亮
+		nmap <silent> <leader><cr> :noh<cr>
+	" 
+		nmap <leader>fd :se ff=dos<cr>
+		nmap <leader>fu :se ff=unix<cr>
+		map <leader>m :MAX<CR>
+		com! MAX :let &lines=500<bar>let &columns=50
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 自动格式化设置
+	filetype indent on
+	set autoindent
+	set smartindent
+" browsedir设置
+	set browsedir=buffer
+	set autochdir
+" 设置备份及备份目录。
+	set backspace=indent,eol,start
+	set backupdir=$vim\BackupDir
+" history文件中需要记录的行数，恢复必须用到。
+	set history=1024
+" 窗口最大化
+	autocmd GUIEnter * simalt ~x
+" 在处理未保存或只读文件的时候，弹出确认
+set confirm
+	" 共享外部剪贴板
+set clipboard+=unnamed
+" 显示未完成命令
+set showcmd
+" 侦测文件类型
+filetype on
+" 载入文件类型插件
+filetype plugin on
+" 为特定文件类型载入相关缩进文件
+filetype indent on
+" 保存全局变量
+set viminfo+=!
+" 带有如下符号的单词不要被换行分割
+set iskeyword+=_,$,@,%,#,-
+" 语法高亮
+syntax on
+" 设置鼠标支持
+set mouse=a
+" 当buffer被丢弃时隐藏
+set bufhidden=hide
+" 保存窗口大小
+set sessionoptions+=resize
+" 显示行号
+	set rnu
+	au InsertEnter * :set nu
+	au InsertLeave * :set rnu
+" tab宽度
+	set tabstop=4
+	set cindent shiftwidth=4
+	set autoindent shiftwidth=4
+" 增强检索功能
+set tags=./tags,./../tags,./**/tags
+" 文件被其他程序修改时自动载入
+set autoread
+" 高亮字符，让其不受100列限制
+":highlight OverLength ctermbg=red ctermfg=white guibg=red guifg=white
+":match OverLength '\%201v.*'
+" 总是显示状态行
+set laststatus=2
+" 设置命令行高度为2行
+set cmdheight=1
+" 命令行补全
+set wildmenu
+" 自动补全括号，包括大括号
+	:inoremap ( ()<ESC>i
+	:inoremap ) <c-r>=ClosePair(')')<CR>
+	:inoremap { {}<ESC>i
+	:inoremap } <c-r>=ClosePair('}')<CR>
+	:inoremap [ []<ESC>i
+	:inoremap ] <c-r>=ClosePair(']')<CR>
+	:inoremap < <><ESC>i
+	:inoremap > <c-r>=ClosePair('>')<CR>
+" 打开文件时，总是跳到退出之前的光标处
+autocmd BufReadPost *
+\ if line("'\"") > 0 && line("'\"") <= line("$") |
+\   exe "normal! g`\"" |
+\ endif
+" 高亮当前行
+	if has("gui_running")
+		autocmd InsertLeave * se nocul
+		autocmd InsertLeave * se nocuc
+		autocmd InsertEnter * se cuc
+		autocmd InsertEnter * se cul
+	endif
+" 保存代码文件前自动修改最后修改时间
+	au BufWritePre *.sh           call TimeStamp('#')
+	au BufWritePre _vimrc,*.vim   call TimeStamp('"')
+	au BufWritePre *.c,*.h        call TimeStamp('//')
+	au BufWritePre *.cpp,*.hpp    call TimeStamp('//')
+	au BufWritePre *.cxx,*.hxx    call TimeStamp('//')
+	au BufWritePre *.java         call TimeStamp('//')
+	au BufWritePre *.rb           call TimeStamp('#')
+	au BufWritePre *.py           call TimeStamp('#')
+	au BufWritePre Makefile       call TimeStamp('#')
+	au BufWritePre *.php
+		\call TimeStamp('<?php //', '?>')
+	au BufWritePre *.html,*htm
+		\call TimeStamp('<!--', '-->')
+" 设置显示字体
+	if has("win32")
+		set guifont=XHei_Mono.Minglan.consolas.pl:h12:cANSI
+		"set guifontwide=Source_Code_Pro:h12:cANSI
+	endif
+" 不要闪烁
+set novisualbell
+" 能够漂亮地显示.NFO文件
+set encoding=utf-8
+function! SetFileEncodings(encodings)
+    let b:myfileencodingsbak=&fileencodings
+    let &fileencodings=a:encodings
+endfunction
+function! RestoreFileEncodings()
+    let &fileencodings=b:myfileencodingsbak
+    unlet b:myfileencodingsbak
+endfunction
+au BufReadPre *.nfo call SetFileEncodings('cp437')|set ambiwidth=single
+au BufReadPost *.nfo call RestoreFileEncodings()
+" 用空格键来开关折叠
+set foldenable
+set foldmethod=manual
+nnoremap <space> @=((foldclosed(line('.')) < 0) ? 'zc' : 'zo')<CR>
+" 隐藏掉菜单和工具条。
+	set guioptions-=m
+	set guioptions-=T
+	map <silent> <F2> :if &guioptions =~# 'T' <Bar>
+			\set guioptions-=T <Bar>
+			\set guioptions-=m <bar>
+		\else <Bar>
+			\set guioptions+=T <Bar>
+			\set guioptions+=m <Bar>
+		\endif<CR>
+" 标签页设置
+	if has("gui_running")
+		set showtabline=2
+	endif
+" 标签页只显示文件名
+function! ShortTabLabel ()
+    let bufnrlist = tabpagebuflist (v:lnum)
+    let label = bufname (bufnrlist[tabpagewinnr (v:lnum) -1])
+    let filename = fnamemodify (label, ':t')
+    return filename
+endfunction
+set guitablabel=%{ShortTabLabel()} 
+" 使回格键（backspace）正常处理indent, eol, start等
+set backspace=eol,start,indent
+" 允许backspace和光标键跨越行边界
+ set whichwrap+=<,>,h,l
+" 可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+" 启动的时候不显示那个援助索马里儿童的提示
+set shortmess=I
+" 通过使用:commands命令，告诉我们文件的哪一行被改变过
+set report=0
+" 不让vim发出讨厌的滴滴声
+set noerrorbells
+" 在被分割的窗口间显示空白，便于阅读
+"set fillchars=vert:\ ,stl:\ ,stlnc:\
+ 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"搜索和匹配
+	" 高亮显示匹配的括号
+	set showmatch
+	" 匹配括号高亮的时间（单位是十分之一秒）
+	set matchtime=3
+	" 在搜索的时候忽略大小写
+	set ignorecase
+	" 不要高亮被搜索的句子（phrases）
+	 set nohlsearch
+	" 在搜索时，输入的词句的逐字符高亮（类似firefox的搜索）
+	set incsearch
+	" 输入:set list命令是应该显示些啥？
+	set listchars=tab:\|\ ,trail:.,extends:>,precedes:<,eol:$
+	" Tab补全时忽略这些忽略这些
+	set wildignore=*.o,*.obj,*.bak,*.exe
+	" 光标移动到buffer的顶部和底部时保持3行距离
+	set scrolloff=3
+	"搜索出之后高亮关键词
+	set hlsearch
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"CTags的设定 
+	nmap <F9> <Esc>:!ctags -R *<CR>
+	set tags=tags;
+	" 按照名称排序
+	let Tlist_Sort_Type = "name"
+	" 在右侧显示窗口
+	let Tlist_Use_Right_Window = 1
+	" 压缩方式
+	let Tlist_Compart_Format = 1
+	" 如果只有一个buffer，kill窗口也kill掉buffer
+	let Tlist_Exist_OnlyWindow = 1
+	" 不要关闭其他文件的tags
+	let Tlist_File_Fold_Auto_Close = 0
+	" 不要显示折叠树
+	let Tlist_Enable_Fold_Column = 0
+	" 这项必须设定，否则出错,配置taglist的ctags路径
+	let Tlist_Ctags_Cmd = 'D:\Vim\vim73\ctags.exe'
+	" 不同时显示多个文件的 tag ，只显示当前文件的
+	let Tlist_Show_One_File=1
+	"让当前不被编辑的文件的方法列表自动折叠起来 
+	let Tlist_File_Fold_Auto_Close=1
+	"显示taglist菜单
+	let Tlist_Show_Menu=1
+	"启动vim自动打开taglist
+	let Tlist_Auto_Open=1
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                       脚本内部用到的自定义函数                              "
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"实现光标位置自动交换:) -->  ):
+	function! Swap()
+		if getline('.')[col('.') - 1] =~ ")"
+			return "\<ESC>la:"
+		else
+			return ":"
+		endif
+	endf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"实现+-*/前后自动添加空格，逗号后面自动添加空格，适用python
+"支持+= -+ *= /+格式
+	function! EqualSign(char)
+		if a:char  =~ '='  && getline('.') =~ ".*("
+			return a:char
+		endif
+		let ex1 = getline('.')[col('.') - 3]
+		let ex2 = getline('.')[col('.') - 2]
+	 
+		if ex1 =~ "[-=+><>\/\*]"
+			if ex2 !~ "\s"
+				return "\<ESC>i".a:char."\<SPACE>"
+			else
+				return "\<ESC>xa".a:char."\<SPACE>"
+			endif
+		else
+			if ex2 !~ "\s"
+				return "\<SPACE>".a:char."\<SPACE>\<ESC>a"
+			else
+				return a:char."\<SPACE>\<ESC>a"
+			endif
+		endif
+	endf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"实现括号的自动配对后防止重复输入），适用python
+	function! ClosePair(char)
+		if getline('.')[col('.') - 1] == a:char
+			return "\<Right>"
+		else
+			return a:char
+		endif
+	endf
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"SwitchToBuf()实现它在所有标签页的窗口中查找指定的文件名，如果找到这样一个窗口，
+"就跳到此窗口中；否则，它新建一个标签页来打开vimrc文件
+"上面自动编辑.vimrc文件用到的函数
+	function! SwitchToBuf(filename)
+		let bufwinnr = bufwinnr(a:filename)
+		if bufwinnr != -1
+		exec bufwinnr . "wincmd w"
+			return
+		else
+			" find in each tab
+			tabfirst
+			let tab = 1
+			while tab <= tabpagenr("$")
+				let bufwinnr = bufwinnr(a:filename)
+				if bufwinnr != -1
+					exec "normal " . tab . "gt"
+					exec bufwinnr . "wincmd w"
+					return
+				endif
+				tabnext
+				let tab = tab + 1
+			endwhile
+			" not exist, new tab
+			exec "tabnew " . a:filename
+		endif
+	endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Last change用到的函数，返回时间，能够自动调整位置
+	function! TimeStamp(...)
+		let sbegin = ''
+		let send = ''
+		if a:0 >= 1
+			let sbegin = a:1.'\s*'
+		endif
+		if a:0 >= 2
+			let send = ' '.a:2
+		endif
+		let pattern =  'Last Change: .\+'
+			\. send
+		let pattern = '^\s*' . sbegin . pattern . '\s*$'
+		let now = strftime('%Y-%m-%d %H:%M:%S',
+			\localtime())
+		let row = search(pattern, 'n')
+		if row  == 0
+		   let now = a:1 .  ' Last Change:  '
+				\. now . send
+			call append(2, now)
+		else
+			let curstr = getline(row)
+			let col = match( curstr , 'Last')
+			let spacestr = repeat(' ',col - 1)
+			let now = a:1 . spacestr . 'Last Change:  '
+				\. now . send
+			call setline(row, now)
+		endif
+	endfunction
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vimim 输入法配置
+	:let g:vimim_map='m-space'	" Alt-空格键 开关输入法
+	:let g:vimim_cloud='sogou'	" 搜狗云输入
+	:let g:vimim_toggle = 'pinyin,sogou'	"循环切换输入法
+	" powerline
+	set t_Co=256
+	let g:Powerline_symbols = 'fancy'
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ahk
+	autocmd BufEnter,BufRead *.ahk set dictionary+=$VIM\dict\ahk
+	autocmd BufLeave,BufDelete  *.ahk set dictionary-=$VIM\dict\ahk
+	"autocmd BufEnter,BufRead *.ahk set makeprg=\"D:\AutoHotKeyL\AutoHotkeyu32.exe\"\ /ErrorStdOut\ %
+	"set efm=%E%f\ (%l)\ :\ ==>\ %m.,%C\ \ \ \ \ %m
+	autocmd BufRead,Bufnewfile *.ahk map <F7> :silent !"D:\AutoHotKeyL\Compiler\Ahk2Exe.exe" /in % <CR>
+	"autocmd BufRead,Bufnewfile *.ahk map <F5> :call MyMake()<CR>
+	function! MyMake() 
+			silent make 
+			redraw! 
+			for i in getqflist() 
+					if i['valid'] 
+							cwin 
+							winc p 
+							return 
+					endif 
+	endfor 
+	endfunction 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" python
+	"autocmd BufEnter *.py set makeprg=\"d:\Python27\python.exe\"\ %
+	"autocmd BufEnter *.py map <F5> ,r
+	"autocmd BufRead,BufNewFile *.py set dictionary+=$VIM\dict\python
+	" Pathogen load
+	"filetype off
+	"call pathogen#infect()
+	"call pathogen#helptags()
+	"filetype plugin indent on
+	"syntax on
+	" maximize vim window
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" winmanager
+	" 设置界面分割
+	let g:AutoOpenWinManager = 1
+	let g:winManagerWindowLayout = 'FileExplorer,TagsExplorer|BufExplorer'
+	"let g:winManagerWidth = 30
+	nmap <silent> <F8> :WMToggle<cr>:TlistToggle<cr>
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"
+let g:indent_guides_enable_on_vim_startup = 1
+"let g:indent_guides_guide_size=1
+
+"根据编辑模式更改输入法光标颜色，同时禁用IME自动切换
+if has('multi_byte_ime')
+	"hi Cursor guifg=bg guibg=Orange gui=NONE
+	"hi CursorIM guifg=NONE guibg=Skyblue gui=NONE
+	set iminsert=0 imsearch=0
+endif
+
+let g:neocomplcache_enable_at_startup = 1 
+
+set fdc=1
+set fdm=indent
+set fdl=100
+"用|代替tab， 最后面有一个空格，注意
+"set list lcs=tab:\¦\ 
+hi VertSplit guifg=#080808
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"配色
+	"color jellybeans
+	color mymolokai
+	"molokai 主题设置 斜体
+	"hi SpecialKey gui=none
+	"hi VertSplit guifg=#080808
+	hi FoldColumn guibg=#232526
+	hi FoldColumn guifg=#F92672
+	hi Normal guifg=#F8F8F2 guibg=#1B1D1E
+	set go=
+

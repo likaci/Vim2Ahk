@@ -1,0 +1,63 @@
+##安装
+###1.建议路径是 d:\Vim\
+	即 d:\
+		|-vim\
+		|	|-vim73\
+		|	|-vimfile\
+		|	|-BackupDir\
+		|	|-Dict\
+
+###2.配置ctags
+如果**不**使用taglist可以省略以下
+	ctags.cnf 放到$HOME中,win7默认为 c:\Users\用户名\ ,可以在vim中 :ec $HOME  获取路径
+	ctags.exe 放到环境变量的path中 比如c:\windows
+
+###3编辑vimrc
+	编辑vimrc的62 63 两行,路径中尽量不要使用空格和中文
+	let g:AhkSIDE_AhkChm = 'd:\AutoHotKeyL\AutoHotkey.chm'
+	let g:AhkSIDE_AhkExe = 'd:\AutoHotKeyL\AutoHotkeyA32.exe'
+
+  完成后即可
+
+###预设**快捷键**
+	F1 编辑状态下  代码提示
+		alt-F1 查询帮助chm
+	F2 隐藏显示菜单栏
+	F4 跳转到错误
+	F5 运行
+	F6 结束运行
+	F7 编译
+	F8 打开taglis等
+	F9 生成tags
+
+###其他快捷键
+	leader设置为" , "
+	,c 关闭当前窗口
+	,o 关闭其他窗口
+	,b 新建窗口
+	,n 下个窗口
+
+	gc 关闭当前tab
+	go 关闭其他tab
+	gb 新建tab
+	gn 下个tab
+
+	,e 编辑vimrc
+	,s 重载vimrc
+	,ww 保存文件
+	,wf 强制保存
+	,qq 退出/关闭窗口
+	,qa 退出所有
+
+###再其他的快捷键见vimrc
+---
+
+##感谢
+感谢sunwind的指点 
+还有ahkside作者[loaxs](http://ahk.5d6d.net/viewthread.php?tid=5462&pid=33912&page=1&extra=#pid33912)   
+有幸如果作者能看见一定要联系我likaci(a)qq.com   
+最主要的功能全部有ahkside实现,我只是稍作修改后各个插件的堆砌，修改后的ahkside在bundle\AhkSIDE\ 中   
+还有vim作者,各位插件作者  
+##预览
+![](http://blog.xiazhiri.com/pic/vim2ahk.jpg)
+[更多信息](http://blog.xiazhiri.com/vim2ahk.html)
