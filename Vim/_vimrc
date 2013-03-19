@@ -1,6 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-" Last Change:  2013-03-18 17:02:20
+" Last Change:  2013-03-19 10:57:19
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 编码
@@ -65,7 +65,7 @@ let g:AhkSIDE_hk_i_ShowHints ='<F1>'
 let g:AhkSIDE_hk_in_Help = '!F1'
 let tlist_autohotkey_settings = 'autohotkey;k:Hotkeys;s:Hotstrings;l:Label;f:Function;v:Variable;n:note;t:Todo'
 "编译ahk
-autocmd BufRead,Bufnewfile *.ahk map <F7> :silent !"D:\AutoHotKeyL\Compiler\Ahk2Exe.exe" /in % <CR>
+autocmd BufRead,Bufnewfile *.ahk map <F7> :silent !"$VIM\AutoHotKeyL\Compiler\Ahk2Exe.exe" /in % <CR>
 "let g:acp_behaviorSnipmateLength = "1"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "按键映射
