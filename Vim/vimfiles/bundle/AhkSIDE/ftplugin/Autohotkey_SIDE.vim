@@ -1,5 +1,6 @@
 " AutoHotkey_SIDE ( Simple IDE )
 
+" Last Change:  2013-03-19 10:11:59
 " Initialize {{{
 " Set the path of Autohotkey.exe
 if !exists('g:AhkSIDE_AhkExe')
@@ -130,7 +131,7 @@ function! AhkInfoWnd_Init()
 	let g:AhkInfoBufNr = bufnr('')
 
 	" Set Syntax Highlight {{{
-	syn match ahkinfowndLS '^\%(AhkExe\|Script\|ExitCode\):' contains=ahkinfowndFc
+	syn match ahkinfowndLS '^\%(AhkExe:\|Script:\|Running\|ExitCode:\)' contains=ahkinfowndFc
 	syn match ahkinfowndLError '.\+(\d\+) : ==>.\+' contains=ahkinfowndFcErrorLineNr
 
 	hi def link ahkinfowndLS StorageClass
@@ -256,11 +257,13 @@ function! AhkRunStopScript(fg_Run,...)
 	if a:fg_Run == 1
 		update
 		let g:AhkRunningFile=expand('%:p')
-		let g:AhkInfo = "AhkExe: " . g:AhkSIDE_AhkExe . "\nScript: " . g:AhkRunningFile
+		let g:AhkInfo = "AhkExe: " . g:AhkSIDE_AhkExe . "\nScript: " . g:AhkRunningFile . "\nRunning"
+		"let g:AhkInfo = "AhkExe: " . g:AhkSIDE_AhkExe . "\nScript: " . g:AhkRunningFile
 		call AhkInfoWnd_SetText(g:AhkInfo)
 	" }}}
 	" fg_Run != 1, Script stop. " {{{
 	else
+		"call AhkInfoWnd_SetText(g:AhkInfoStop)
 		call AhkInfoWnd_SetText(a:1)
 		unlet g:AhkRunningFile
 	endif " }}}
