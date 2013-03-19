@@ -1,0 +1,96 @@
+snippet if
+	If ${1:condition}
+	{
+		${2:;True code}
+	}
+snippet el
+	Else
+	{
+		${1}
+	}
+snippet elif
+	Else If ${1:condition}
+		{	
+			${2:;True code}
+		}
+# If/Else block
+snippet ifel
+	If ${1:condition}
+	{
+		${2:; True code}
+	}
+	Else
+	{
+		${3:; Else code}
+	}
+# If/ElseIf/Else block
+snippet ifelif
+	If ${1:condition 1}
+	{
+		${2:; True code}
+	}
+	Else If ${3:condition 2} Then
+		 {
+		 	${4:; True code}
+		 }
+		 Else
+# While loop
+snippet while
+	While (${1:condition})
+	{
+		${2:; code...}
+	}
+# For loop
+snippet for
+	For ${1:n} = ${3:1} to ${2:count}
+		${4:; code...}
+	Next
+# New Function
+snippet func
+	Func ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+		${4:Return}
+	EndFunc
+# Message box
+snippet msg
+	MsgBox, ${3:/*Options*/} , ${2:/*Title*/}, ${1:/*Message Text*/}, ${4:/*Time Out*/}
+# Debug Message
+snippet debug
+	MsgBox(0, "Debug", ${1:"Debug Message"})
+# Show Variable Debug Message
+snippet showvar
+	MsgBox(0, "${1:VarName}", $1)
+snippet IfEqual
+	IfEqual , ${1:/*var*/}, ${2:/*value*/}
+snippet IfExist 
+	IfExist, ${1:/*File|Dir|Pattern*/}
+snippet IfGreater
+	IfGreater, ${1:/*var*/}, ${2:/*value*/}
+snippet IfGreaterOrEqual
+	IfGreaterOrEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet IfInString
+	IfInString, ${1:/*var*/}, ${2:/*SearchString*/}
+snippet IfLess
+	IfLess, ${1:/*var*/}, ${2:/*value*/}
+snippet IfLessOrEqual
+	IfLessOrEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet IfMsgBox
+	IfMsgBox, ${1:/*Yes|No|OK|Cancel|Abort|Ignore|Retry|Timeout*/}
+snippet IfNotEqual
+	IfNotEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet IfNotExist
+	IfNotExist, ${1:/*File|Dir|Pattern*/}
+snippet IfNotInString
+	IfNotInString, ${1:/*var*/}, ${2:/*SearchString*/}
+snippet IfWinActive
+	IfWinActive, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText*/}
+snippet IfWinExist
+	IfWinExist, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText*/}
+snippet IfWinNotActive
+	IfWinNotActive, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText*/}
+snippet IfWinNotExist
+	IfWinNotExist, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText*/}
+
+
+
+
+

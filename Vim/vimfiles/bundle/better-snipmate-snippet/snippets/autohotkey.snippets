@@ -1,0 +1,920 @@
+snippet	#AllowSameLineComments
+	#AllowSameLineComments
+snippet	#ClipboardTimeout milliseconds
+	#ClipboardTimeout milliseconds
+snippet	#CommentFlag NewString
+	#CommentFlag NewString
+snippet	#ErrorStdOut
+	#ErrorStdOut
+snippet	#EscapeChar NewChar
+	#EscapeChar NewChar
+snippet	#HotkeyInterval Value
+	#HotkeyInterval Value
+snippet	#HotkeyModifierTimeout milliseconds
+	#HotkeyModifierTimeout milliseconds
+snippet	#Hotstring NewOptions
+	#Hotstring NewOptions
+snippet	#IfWinActive [
+	#IfWinActive, ${1:/*[ WinTitle*/}, ${2:/*WinText]*/}
+snippet	#IfWinExist [
+	#IfWinExist, ${1:/*[ WinTitle*/}, ${2:/*WinText]*/}
+snippet	#IfWinNotActive [
+	#IfWinNotActive, ${1:/*[ WinTitle*/}, ${2:/*WinText]*/}
+snippet	#IfWinNotExist [
+	#IfWinNotExist, ${1:/*[ WinTitle*/}, ${2:/*WinText]*/}
+snippet	#Include FileName
+	#Include FileName
+snippet	#IncludeAgain FileName
+	#IncludeAgain FileName
+snippet	#InstallKeybdHook
+	#InstallKeybdHook
+snippet	#InstallMouseHook
+	#InstallMouseHook
+snippet	#KeyHistory MaxEvents
+	#KeyHistory MaxEvents
+snippet	#LTrim On|Off
+	#LTrim On|Off
+snippet	#MaxHotkeysPerInterval Value
+	#MaxHotkeysPerInterval Value
+snippet	#MaxMem ValueInMegabytes
+	#MaxMem ValueInMegabytes
+snippet	#MaxThreads Value
+	#MaxThreads Value
+snippet	#MaxThreadsBuffer On|Off
+	#MaxThreadsBuffer On|Off
+snippet	#MaxThreadsPerHotkey Value
+	#MaxThreadsPerHotkey Value
+snippet	#NoEnv
+	#NoEnv
+snippet	#NoTrayIcon
+	#NoTrayIcon
+snippet	#Persistent
+	#Persistent
+snippet	#SingleInstance [force|ignore|off]
+	#SingleInstance ${1:/*[force|ignore|off]*/}
+snippet	#UseHook [On|Off]
+	#UseHook [On|Off]
+snippet	#WinActivateForce
+	#WinActivateForce
+snippet	BlockInput
+	BlockInput, ${1:/*On|Off|Send|Mouse|SendAndMouse|Default|MouseMove|MouseMoveOff*/}
+snippet	Break
+	Break
+snippet	Click
+	Click
+snippet	ClipWait
+	ClipWait, ${1:/*[ SecondsToWait*/}, ${2:/*1]*/}
+snippet	Continue
+	Continue
+snippet	Control
+	Control, ${1:/*Cmd [*/}, ${2:/*Value*/}, ${3:/*Control*/}, ${4:/*WinTitle*/}, ${5:/*WinText*/}, ${6:/*ExcludeTitle*/}, ${7:/*ExcludeText]*/}
+snippet	ControlFocus
+	ControlFocus, ${1:/*[ Control*/}, ${2:/*WinTitle*/}, ${3:/*WinText*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	ControlGetFocus
+	ControlGetFocus, ${1:/*OutputVar*/}, ${2:/*[WinTitle*/}, ${3:/*WinText*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	ControlGetPos
+	ControlGetPos, ${1:/*[ X*/}, ${2:/*Y*/}, ${3:/*Width*/}, ${4:/*Height*/}, ${5:/*Control*/}, ${6:/*WinTitle*/}, ${7:/*WinText*/}, ${8:/*ExcludeTitle*/}
+snippet	ControlGetText
+	ControlGetText, ${1:/*OutputVar [*/}, ${2:/*Control*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	ControlMove
+	ControlMove, ${1:/*Control*/}, ${2:/*X*/}, ${3:/*Y*/}, ${4:/*Width*/}, ${5:/*Height [*/}, ${6:/*WinTitle*/}, ${7:/*WinText*/}, ${8:/*ExcludeTitle*/}
+snippet	ControlSend
+	ControlSend, ${1:/*[ Control*/}, ${2:/*Keys*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	ControlSendRaw
+	ControlSendRaw, ${1:/*[ Control*/}, ${2:/*Keys*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	ControlSetText
+	ControlSetText, ${1:/*Control*/}, ${2:/*NewText [*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	CoordMode
+	CoordMode, ${1:/*ToolTip|Pixel|Mouse [*/}, ${2:/*Screen|Relative]*/}
+snippet	Critical
+	Critical, ${1:/*[ Off]*/}
+snippet	DetectHiddenText
+	DetectHiddenText, ${1:/*On|Off*/}
+snippet	DetectHiddenWindows
+	DetectHiddenWindows, ${1:/*On|Off*/}
+snippet	Drive
+	Drive, ${1:/*Sub-command [*/}, ${2:/*Drive*/}, ${3:/*Value]*/}
+snippet	DriveGet
+	DriveGet, ${1:/*OutputVar*/}, ${2:/*Cmd [*/}, ${3:/*Value]*/}
+snippet	DriveSpaceFree
+	DriveSpaceFree, ${1:/*OutputVar*/}, ${2:/*C:\\*/}
+snippet	Edit
+	Edit
+snippet	Else
+	Else
+snippet	EnvAdd
+	EnvAdd, ${1:/*Var*/}, ${2:/*Value [*/}, ${3:/*TimeUnits]*/}
+snippet	EnvDiv
+	EnvDiv, ${1:/*Var*/}, ${2:/*Value*/}
+snippet	EnvGet
+	EnvGet, ${1:/*OutputVar*/}, ${2:/*EnvVarName*/}
+snippet	EnvMult
+	EnvMult, ${1:/*Var*/}, ${2:/*Value*/}
+snippet	EnvSet
+	EnvSet, ${1:/*EnvVar*/}, ${2:/*Value*/}
+snippet	EnvSub
+	EnvSub, ${1:/*Var*/}, ${2:/*Value [*/}, ${3:/*TimeUnits]*/}
+snippet	EnvUpdate
+	EnvUpdate
+snippet	Exit
+	Exit, ${1:/*[ ExitCode]*/}
+snippet	ExitApp
+	ExitApp, ${1:/*[ ExitCode]*/}
+snippet	FileAppend
+	FileAppend, ${1:/*[ Text*/}, ${2:/*Filename]*/}
+snippet	FileCopy
+	FileCopy, ${1:/*Source*/}, ${2:/*Dest [*/}, ${3:/*Flag (1 = overwrite)]*/}
+snippet	FileCopyDir
+	FileCopyDir, ${1:/*Source*/}, ${2:/*Dest [*/}, ${3:/*Flag]*/}
+snippet	FileCreateDir
+	FileCreateDir, ${1:/*Path*/}
+snippet	FileCreateShortcut
+	FileCreateShortcut, ${1:/*Target*/}, ${2:/*C:\\My Shortcut.lnk [*/}, ${3:/*WorkingDir*/}, ${4:/*Args*/}, ${5:/*Description*/}, ${6:/*IconFile*/}, ${7:/*ShortcutKey*/}, ${8:/*IconNumber*/}
+snippet	FileDelete
+	FileDelete, ${1:/*FilePattern*/}
+snippet	FileGetAttrib
+	FileGetAttrib, ${1:/*OutputVar(RASHNDOCT) [*/}, ${2:/*Filename]*/}
+snippet	FileGetSize
+	FileGetSize, ${1:/*OutputVar [*/}, ${2:/*Filename*/}, ${3:/*Units]*/}
+snippet	FileGetTime
+	FileGetTime, ${1:/*OutputVar [*/}, ${2:/*Filename*/}, ${3:/*WhichTime (M*/}, ${4:/*C*/}, ${5:/*or A -- default is M)]*/}
+snippet	FileGetVersion
+	FileGetVersion, ${1:/*OutputVar [*/}, ${2:/*Filename]*/}
+snippet	FileInstall
+	FileInstall, ${1:/*Source*/}, ${2:/*Dest [*/}, ${3:/*Flag (1 = overwrite)]*/}
+snippet	FileMove
+	FileMove, ${1:/*Source*/}, ${2:/*Dest [*/}, ${3:/*Flag (1 = overwrite)]*/}
+snippet	FileMoveDir
+	FileMoveDir, ${1:/*Source*/}, ${2:/*Dest [*/}, ${3:/*Flag (2 = overwrite)]*/}
+snippet	FileRead
+	FileRead, ${1:/*OutputVar*/}, ${2:/*Filename*/}
+snippet	FileReadLine
+	FileReadLine, ${1:/*OutputVar*/}, ${2:/*Filename*/}, ${3:/*LineNum*/}
+snippet	FileRecycle
+	FileRecycle, ${1:/*FilePattern*/}
+snippet	FileRecycleEmpty
+	FileRecycleEmpty, ${1:/*[ C:\\]*/}
+snippet	FileRemoveDir
+	FileRemoveDir, ${1:/*Path [*/}, ${2:/*Recurse? (1 = yes)]*/}
+snippet	FileSelectFile
+	FileSelectFile, ${1:/*OutputVar [*/}, ${2:/*Options*/}, ${3:/*RootDir[\\DefaultFilename]*/}, ${4:/*Prompt*/}, ${5:/*Filter]*/}
+snippet	FileSelectFolder
+	FileSelectFolder, ${1:/*OutputVar [*/}, ${2:/**StartingFolder*/}, ${3:/*Options*/}, ${4:/*Prompt]*/}
+snippet	FileSetAttrib
+	FileSetAttrib, ${1:/*Attributes(+-^RASHNOT) [*/}, ${2:/*FilePattern*/}, ${3:/*OperateOnFolders?*/}, ${4:/*Recurse?]*/}
+snippet	FileSetTime
+	FileSetTime, ${1:/*[ YYYYMMDDHH24MISS*/}, ${2:/*FilePattern*/}, ${3:/*WhichTime (M|C|A)*/}, ${4:/*OperateOnFolders?*/}, ${5:/*Recurse?]*/}
+snippet	FormatTime
+	FormatTime, ${1:/*OutputVar [*/}, ${2:/*YYYYMMDDHH24MISS*/}, ${3:/*Format]*/}
+snippet	GetKeyState
+	GetKeyState, ${1:/*OutputVar*/}, ${2:/*WhichKey [*/}, ${3:/*Mode (P|T)]*/}
+snippet	Gosub
+	Gosub, ${1:/*Label*/}
+snippet	Goto
+	Goto, ${1:/*Label*/}
+snippet	GroupActivate
+	GroupActivate, ${1:/*GroupName [*/}, ${2:/*R]*/}
+snippet	GroupAdd
+	GroupAdd, ${1:/*GroupName*/}, ${2:/*WinTitle [*/}, ${3:/*WinText*/}, ${4:/*Label*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	GroupClose
+	GroupClose, ${1:/*GroupName [*/}, ${2:/*A|R]*/}
+snippet	GroupDeactivate
+	GroupDeactivate, ${1:/*GroupName [*/}, ${2:/*R]*/}
+snippet	Gui
+	Gui, ${1:/*sub-command [*/}, ${2:/*Param2*/}, ${3:/*Param3*/}, ${4:/*Param4]*/}
+snippet	GuiControl
+	GuiControl, ${1:/*Sub-command*/}, ${2:/*ControlID [*/}, ${3:/*Param3]*/}
+snippet	GuiControlGet
+	GuiControlGet, ${1:/*OutputVar [*/}, ${2:/*Sub-command*/}, ${3:/*ControlID*/}, ${4:/*Param4]*/}
+snippet	Hotkey
+	Hotkey, ${1:/*KeyName [*/}, ${2:/*Label*/}, ${3:/*Options]*/}
+#if
+snippet if
+	If ${1:condition}
+	{
+		${2:;True code}
+	}
+	${3}
+snippet el
+	Else
+	{
+		${1}
+	}
+snippet elif
+	Else If ${1:condition}
+		{	
+			${2:;True code}
+		}
+# If/Else block
+snippet ifel
+	If ${1:condition}
+	{
+		${2:; True code}
+	}
+	Else
+	{
+		${3:; Else code}
+	}
+# If/ElseIf/Else block
+snippet ifelif
+	If ${1:condition 1}
+	{
+		${2:; True code}
+	}
+	Else If ${3:condition 2} Then
+		 {
+		 	${4:; True code}
+		 }
+		 Else
+# While loop
+snippet while
+	While (${1:condition})
+	{
+		${2:; code...}
+	}
+# For loop
+snippet for
+	For ${1:n} = ${3:1} to ${2:count}
+		${4:; code...}
+	Next
+# New Function
+snippet func
+	Func ${1:fname}(${2:`indent('.') ? 'self' : ''`}):
+		${4:Return}
+	EndFunc
+
+
+
+
+
+snippet	If (var = \"Value\") | IfWinExist
+	If (var = \"Value\") | IfWinExist, ${1:/*WinTitle | etc.`n{`n command1`n command2`n}`nElse`n{`n command1`n command2`n}*/}
+snippet	If Var [not] between Low and High
+	If Var [not] between Low and High
+snippet	If Var [not] contains value1
+	If Var [not] contains value1, ${1:/*value2*/}, ${2:/*...*/}
+snippet	If Var [not] in value1
+	If Var [not] in value1, ${1:/*value2*/}, ${2:/*...*/}
+snippet	If Var is [not] integer|float|number|digit|xdigit|alpha|upper|lower|alnum|space|time
+	If Var is [not] integer|float|number|digit|xdigit|alpha|upper|lower|alnum|space|time
+snippet	IfEqual
+	IfEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet	IfExist
+	IfExist, ${1:/*File|Dir|Pattern*/}
+snippet	IfGreater
+	IfGreater, ${1:/*var*/}, ${2:/*value*/}
+snippet	IfGreaterOrEqual
+	IfGreaterOrEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet	IfInString
+	IfInString, ${1:/*Var*/}, ${2:/*SearchString*/}
+snippet	IfLess
+	IfLess, ${1:/*var*/}, ${2:/*value*/}
+snippet	IfLessOrEqual
+	IfLessOrEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet	IfMsgBox
+	IfMsgBox, ${1:/*Yes|No|OK|Cancel|Abort|Ignore|Retry|Timeout*/}
+snippet	IfNotEqual
+	IfNotEqual, ${1:/*var*/}, ${2:/*value*/}
+snippet	IfNotExist
+	IfNotExist, ${1:/*File|Dir|Pattern*/}
+snippet	IfNotInString
+	IfNotInString, ${1:/*Var*/}, ${2:/*SearchString*/}
+snippet	IfWinActive
+	IfWinActive, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	IfWinExist
+	IfWinExist, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	IfWinNotActive
+	IfWinNotActive, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	IfWinNotExist
+	IfWinNotExist, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	ImageSearch
+	ImageSearch, ${1:/*OutputVarX*/}, ${2:/*OutputVarY*/}, ${3:/*X1*/}, ${4:/*Y1*/}, ${5:/*X2*/}, ${6:/*Y2*/}, ${7:/*ImageFile*/}
+snippet	IniDelete
+	IniDelete, ${1:/*Filename*/}, ${2:/*Section [*/}, ${3:/*Key]*/}
+snippet	IniRead
+	IniRead, ${1:/*OutputVar*/}, ${2:/*Filename*/}, ${3:/*Section*/}, ${4:/*Key [*/}, ${5:/*Default]*/}
+snippet	IniWrite
+	IniWrite, ${1:/*Value*/}, ${2:/*Filename*/}, ${3:/*Section*/}, ${4:/*Key*/}
+snippet	Input
+	Input, ${1:/*[ OutputVar*/}, ${2:/*Options*/}, ${3:/*EndKeys*/}, ${4:/*MatchList]*/}
+snippet	InputBox
+	InputBox, ${1:/*OutputVar [*/}, ${2:/*Title*/}, ${3:/*Prompt*/}, ${4:/*HIDE*/}, ${5:/*Width*/}, ${6:/*Height*/}, ${7:/*X*/}, ${8:/*Y*/}, ${9:/*Font*/}, ${10:Timeout*/}
+snippet	KeyHistory
+	KeyHistory
+snippet	KeyWait
+	KeyWait, ${1:/*KeyName [*/}, ${2:/*Options]*/}
+snippet	ListHotkeys
+	ListHotkeys
+snippet	ListLines
+	ListLines, ${1:/*[ On|Off]*/}
+snippet	ListVars
+	ListVars
+snippet	Loop
+	Loop, ${1:/*[ Count]`n{`n ID := A_Index`n If var%A_Index% =`n break`n}*/}
+snippet	Loop File
+	Loop, ${1:/*FilePattern [*/}, ${2:/*IncludeFolders?*/}, ${3:/*Recurse?]`n{`n FileName := A_LoopFileName`n FileFullPath := A_LoopFileLongPath`n FileRelativeDir := A_LoopFileDir`n command2`n}*/}
+snippet	Loop String
+	Loop, ${1:/*Parse*/}, ${2:/*InputVar [*/}, ${3:/*Delimiters|CSV*/}, ${4:/*OmitChars]`n{`n Line := A_LoopField`n command2`n}*/}
+snippet	Loop File
+	Loop, ${1:/*Read*/}, ${2:/*InputFile [*/}, ${3:/*OutputFile]`n{`n Line := A_LoopReadLine`n command2`n}*/}
+snippet	Loop Reg
+	Loop, ${1:/*HKLM|HKU|HKCU|HKCR|HKCC [*/}, ${2:/*Key*/}, ${3:/*IncludeSubkeys?*/}, ${4:/*Recurse?]`n{`n RegName := A_LoopRegName`n RegType := A_LoopRegType`n command2`n}*/}
+snippet	Menu
+	Menu, ${1:/*MenuName*/}, ${2:/*Cmd [*/}, ${3:/*P3*/}, ${4:/*P4*/}, ${5:/*P5]*/}
+snippet	MouseClick
+	MouseClick, ${1:/*WhichButton [*/}, ${2:/*X*/}, ${3:/*Y*/}, ${4:/*ClickCount*/}, ${5:/*Speed*/}, ${6:/*D|U*/}, ${7:/*R]*/}
+snippet	MouseClickDrag
+	MouseClickDrag, ${1:/*WhichButton*/}, ${2:/*X1*/}, ${3:/*Y1*/}, ${4:/*X2*/}, ${5:/*Y2 [*/}, ${6:/*Speed*/}, ${7:/*R]*/}
+snippet	MouseGetPos
+	MouseGetPos, ${1:/*[ OutputVarX*/}, ${2:/*OutputVarY*/}, ${3:/*OutputVarWin*/}, ${4:/*OutputVarControl*/}, ${5:/*1|2|3]*/}
+snippet	MouseMove
+	MouseMove, ${1:/*X*/}, ${2:/*Y [*/}, ${3:/*Speed*/}, ${4:/*R]*/}
+snippet	MsgBox
+	MsgBox, ${1:/*[ Options*/}, ${2:/*Title*/}, ${3:/*Text*/}, ${4:/*Timeout]*/}
+snippet	OnExit
+	OnExit, ${1:/*[ Label]*/}
+snippet	OutputDebug
+	OutputDebug${1:/*, Text}${2:/* % }$3
+snippet	Pause
+	Pause, ${1:/*[ On|Off|Toggle*/}, ${2:/*OperateOnUnderlyingThread?]*/}
+snippet	PixelGetColor
+	PixelGetColor, ${1:/*OutputVar*/}, ${2:/*X*/}, ${3:/*Y [*/}, ${4:/*Alt|Slow|RGB]*/}
+snippet	PixelSearch
+	PixelSearch, ${1:/*OutputVarX*/}, ${2:/*OutputVarY*/}, ${3:/*X1*/}, ${4:/*Y1*/}, ${5:/*X2*/}, ${6:/*Y2*/}, ${7:/*ColorID [*/}, ${8:/*Variation*/}
+snippet	Process
+	Process, ${1:/*Cmd*/}, ${2:/*PID-or-Name [*/}, ${3:/*Param3]*/}
+snippet	Progress
+	Progress, ${1:/*Param1 [*/}, ${2:/*SubText*/}, ${3:/*MainText*/}, ${4:/*WinTitle*/}, ${5:/*FontName]*/}
+snippet	Random
+	Random, ${1:/*OutputVar [*/}, ${2:/*Min*/}, ${3:/*Max]*/}
+snippet	RegDelete
+	RegDelete, ${1:/*HKLM|HKU|HKCU|HKCR|HKCC*/}, ${2:/*SubKey [*/}, ${3:/*ValueName]*/}
+snippet	RegRead
+	RegRead, ${1:/*OutputVar*/}, ${2:/*HKLM|HKU|HKCU|HKCR|HKCC*/}, ${3:/*SubKey [*/}, ${4:/*ValueName]*/}
+snippet	RegWrite
+	RegWrite, ${1:/*REG_SZ|REG_EXPAND_SZ|REG_MULTI_SZ|REG_DWORD|REG_BINARY*/}, ${2:/*HKLM|HKU|HKCU|HKCR|HKCC*/}, ${3:/*SubKey [*/}, ${4:/*ValueName*/}, ${5:/*Value]*/}
+snippet	Reload
+	Reload
+snippet	Repeat
+	Repeat
+snippet	Return
+	Return, ${1:/*[ Expression]*/}
+snippet	Run
+	Run, ${1:/*Target [*/}, ${2:/*WorkingDir*/}, ${3:/*Max|Min|Hide|UseErrorLevel*/}, ${4:/*OutputVarPID]*/}
+snippet	RunAs
+	RunAs, ${1:/*[ User*/}, ${2:/*Password*/}, ${3:/*Domain]*/}
+snippet	RunWait
+	RunWait, ${1:/*Target [*/}, ${2:/*WorkingDir*/}, ${3:/*Max|Min|Hide|UseErrorLevel*/}, ${4:/*OutputVarPID]*/}
+snippet	Send
+	Send, ${1:/*Keys*/}
+snippet	SendEvent
+	SendEvent, ${1:/*Keys*/}
+snippet	SendInput
+	SendInput, ${1:/*Keys*/}
+snippet	SendMode
+	SendMode, ${1:/*Event|Play|Input|InputThenPlay*/}
+snippet	SendPlay
+	SendPlay, ${1:/*Keys*/}
+snippet	SendRaw
+	SendRaw, ${1:/*Keys*/}
+snippet	SetBatchLines
+	SetBatchLines, ${1:/*-1 | 20ms | LineCount*/}
+snippet	SetCapsLockState
+	SetCapsLockState, ${1:/*On|Off|AlwaysOn|AlwaysOff*/}
+snippet	SetControlDelay
+	SetControlDelay, ${1:/*Delay*/}
+snippet	SetDefaultMouseSpeed
+	SetDefaultMouseSpeed, ${1:/*Speed*/}
+snippet	SetEnv
+	SetEnv, ${1:/*Var*/}, ${2:/*Value*/}
+snippet	SetFormat
+	SetFormat, ${1:/*float|integer*/}, ${2:/*TotalWidth.DecimalPlaces|hex|d*/}
+snippet	SetKeyDelay
+	SetKeyDelay, ${1:/*[ Delay*/}, ${2:/*PressDuration]*/}
+snippet	SetMouseDelay
+	SetMouseDelay, ${1:/*Delay*/}
+snippet	SetNumLockState
+	SetNumLockState, ${1:/*On|Off|AlwaysOn|AlwaysOff*/}
+snippet	SetScrollLockState
+	SetScrollLockState, ${1:/*On|Off|AlwaysOn|AlwaysOff*/}
+snippet	SetStoreCapslockMode
+	SetStoreCapslockMode, ${1:/*On|Off*/}
+snippet	SetTimer
+	SetTimer, ${1:/*Label [*/}, ${2:/*Period|On|Off]*/}
+snippet	SetTitleMatchMode
+	SetTitleMatchMode, ${1:/*Fast|Slow|RegEx|1|2|3*/}
+snippet	SetWinDelay
+	SetWinDelay, ${1:/*Delay*/}
+snippet	SetWorkingDir
+	SetWorkingDir, ${1:/*DirName*/}
+snippet	Shutdown
+	Shutdown, ${1:/*Code*/}
+snippet	Sleep
+	Sleep, ${1:/*Delay*/}
+snippet	Sort
+	Sort, ${1:/*VarName [*/}, ${2:/*Options]*/}
+snippet	SoundBeep
+	SoundBeep, ${1:/*[ Frequency*/}, ${2:/*Duration]*/}
+snippet	SoundGet
+	SoundGet, ${1:/*OutputVar [*/}, ${2:/*ComponentType*/}, ${3:/*ControlType*/}, ${4:/*DeviceNumber]*/}
+snippet	SoundGetWaveVolume
+	SoundGetWaveVolume, ${1:/*OutputVar [*/}, ${2:/*DeviceNumber]*/}
+snippet	SoundPlay
+	SoundPlay, ${1:/*Filename [*/}, ${2:/*wait]*/}
+snippet	SoundSetWaveVolume
+	SoundSetWaveVolume, ${1:/*Percent [*/}, ${2:/*DeviceNumber]*/}
+snippet	SplashImage
+	SplashImage, ${1:/*[ ImageFile*/}, ${2:/*Options*/}, ${3:/*SubText*/}, ${4:/*MainText*/}, ${5:/*WinTitle*/}, ${6:/*FontName]*/}
+snippet	SplashTextOff
+	SplashTextOff
+snippet	SplashTextOn
+	SplashTextOn, ${1:/*[ Width*/}, ${2:/*Height*/}, ${3:/*Title*/}, ${4:/*Text]*/}
+snippet	SplitPath
+	SplitPath, ${1:/*InputVar [*/}, ${2:/*OutFileName*/}, ${3:/*OutDir*/}, ${4:/*OutExtension*/}, ${5:/*OutNameNoExt*/}, ${6:/*OutDrive]*/}
+snippet	StatusBarGetText
+	StatusBarGetText, ${1:/*OutputVar [*/}, ${2:/*Part#*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	StringCaseSense
+	StringCaseSense, ${1:/*On|Off|Locale*/}
+snippet	StringGetPos
+	StringGetPos, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*SearchText [*/}, ${4:/*L#|R#*/}, ${5:/*Offset]*/}
+snippet	StringLeft
+	StringLeft, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*Count*/}
+snippet	StringLen
+	StringLen, ${1:/*OutputVar*/}, ${2:/*InputVar*/}
+snippet	StringLower
+	StringLower, ${1:/*OutputVar*/}, ${2:/*InputVar [*/}, ${3:/*T]*/}
+snippet	StringMid
+	StringMid, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*StartChar [*/}, ${4:/*Count*/}, ${5:/*L]*/}
+snippet	StringReplace
+	StringReplace, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*SearchText [*/}, ${4:/*ReplaceText*/}, ${5:/*All]*/}
+snippet	StringRight
+	StringRight, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*Count*/}
+snippet	StringSplit
+	StringSplit, ${1:/*OutputArray*/}, ${2:/*InputVar [*/}, ${3:/*Delimiters*/}, ${4:/*OmitChars]*/}
+snippet	StringTrimLeft
+	StringTrimLeft, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*Count*/}
+snippet	StringTrimRight
+	StringTrimRight, ${1:/*OutputVar*/}, ${2:/*InputVar*/}, ${3:/*Count*/}
+snippet	StringUpper
+	StringUpper, ${1:/*OutputVar*/}, ${2:/*InputVar [*/}, ${3:/*T]*/}
+snippet	Suspend
+	Suspend, ${1:/*[ On|Off|Toggle|Permit]*/}
+snippet	SysGet
+	SysGet, ${1:/*OutputVar*/}, ${2:/*Sub-command [*/}, ${3:/*Param3]*/}
+snippet	ToolTip
+	ToolTip, ${1:/*[ Text*/}, ${2:/*X*/}, ${3:/*Y*/}, ${4:/*WhichToolTip]*/}
+snippet	Transform
+	Transform, ${1:/*OutputVar*/}, ${2:/*Cmd*/}, ${3:/*Value1 [*/}, ${4:/*Value2]*/}
+snippet	TrayTip
+	TrayTip, ${1:/*[ Title*/}, ${2:/*Text*/}, ${3:/*Seconds*/}, ${4:/*Options]*/}
+snippet	URLDownloadToFile
+	URLDownloadToFile, ${1:/*URL*/}, ${2:/*Filename*/}
+snippet	While
+	While, ${1:/*Expression*/}
+snippet	WinActivate
+	WinActivate, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinActivateBottom
+	WinActivateBottom, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinClose
+	WinClose, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*SecondsToWait*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinGet
+	WinGet, ${1:/*OutputVar [*/}, ${2:/*Cmd*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	WinGetActiveStats
+	WinGetActiveStats, ${1:/*Title*/}, ${2:/*Width*/}, ${3:/*Height*/}, ${4:/*X*/}, ${5:/*Y*/}
+snippet	WinGetActiveTitle
+	WinGetActiveTitle, ${1:/*OutputVar*/}
+snippet	WinGetClass
+	WinGetClass, ${1:/*OutputVar [*/}, ${2:/*WinTitle*/}, ${3:/*WinText*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinGetText
+	WinGetText, ${1:/*OutputVar [*/}, ${2:/*WinTitle*/}, ${3:/*WinText*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinGetTitle
+	WinGetTitle, ${1:/*OutputVar [*/}, ${2:/*WinTitle*/}, ${3:/*WinText*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinHide
+	WinHide,${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinKill
+	WinKill,${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*SecondsToWait*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinMaximize
+	WinMaximize, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinMenuSelectItem
+	WinMenuSelectItem, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*Menu [*/}, ${4:/*SubMenu1*/}, ${5:/*SubMenu2*/}, ${6:/*SubMenu3*/}, ${7:/*SubMenu4*/}, ${8:/*SubMenu5*/}, ${9:/*SubMenu6*/}, ${10:ExcludeTitle*/}
+snippet	WinMinimize
+	WinMinimize, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinMinimizeAll
+	WinMinimizeAll
+snippet	WinMinimizeAllUndo
+	WinMinimizeAllUndo
+snippet	WinRestore
+	WinRestore, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinSet
+	WinSet, ${1:/*AlwaysOnTop|Trans*/}, ${2:/*On|Off|Toggle|Value(0-255) [*/}, ${3:/*WinTitle*/}, ${4:/*WinText*/}, ${5:/*ExcludeTitle*/}, ${6:/*ExcludeText]*/}
+snippet	WinSetTitle
+	WinSetTitle, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*NewTitle [*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinShow
+	WinShow, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*ExcludeTitle*/}, ${4:/*ExcludeText]*/}
+snippet	WinWait
+	WinWait, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*Seconds [*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinWaitActive
+	WinWaitActive, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*Seconds*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinWaitClose
+	WinWaitClose, ${1:/*WinTitle*/}, ${2:/*WinText*/}, ${3:/*Seconds [*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+snippet	WinWaitNotActive
+	WinWaitNotActive, ${1:/*[ WinTitle*/}, ${2:/*WinText*/}, ${3:/*Seconds*/}, ${4:/*ExcludeTitle*/}, ${5:/*ExcludeText]*/}
+
+
+#// Functions
+
+snippet	Abs(Number)
+	Abs(${1:/*Number*/})
+snippet	ACos(Number)
+	ACos(${1:/*Number*/})
+snippet	Asc(String)
+	Asc(${1:/*String*/})
+snippet	ASin(Number)
+	ASin(${1:/*Number*/})
+snippet	ATan(Number)
+	ATan(${1:/*Number*/})
+snippet	Ceil(Number)
+	Ceil(${1:/*Number*/})
+snippet	Chr(Number)
+	Chr(${1:/*Number*/})
+snippet	Cos(Number)
+	Cos(${1:/*Number*/})
+snippet	DllCall
+	DllCall(\"${1:/*[DllFile\\]Function}\",${2:/*[ Type1*/}, ${3:/*Arg1*/}, ${4:/*Type2*/}, ${5:/*Arg2*/}, ${6:/*\"Cdecl ReturnType\"]*/})
+snippet	Exp(Number)
+	Exp(${1:/*Number*/})
+snippet	FileExist()
+	FileExist(\"${1:/*FilePattern}\")
+snippet	Floor(Number)
+	Floor(${1:/*Number*/})
+snippet	GetKeyState()
+	GetKeyState(${1:/*KeyName [*/}, ${2:/*\"P\" or \"T\"]*/})
+snippet	IL_Add()
+	IL_Add(${1:/*ImageListID*/}, ${2:/*Filename [*/}, ${3:/*IconNumber*/}, ${4:/*ResizeNonIcon?]*/})
+snippet	IL_Create()
+	IL_Create(${1:/*[InitialCount*/}, ${2:/*GrowCount*/}, ${3:/*LargeIcons?]*/})
+snippet	IL_Destroy()
+	IL_Destroy(${1:/*ImageListID*/})
+snippet	InStr(Haystack
+	InStr(${1:/*Haystack*/}, ${2:/*Needle [*/}, ${3:/*CaseSensitive?*/}, ${4:/*StartingPos]*/})
+snippet	IsFunc(FunctionName)
+	IsFunc(${1:/*FunctionName*/})
+snippet	IsLabel(LabelName)
+	IsLabel(${1:/*LabelName*/})
+snippet	Ln(Number)
+	Ln(${1:/*Number*/})
+snippet	Log(Number)
+	Log(${1:/*Number*/})
+snippet	LV_Add()
+	LV_Add({1:/*[Options*/}, ${2:/*Col1*/}, ${3:/*Col2*/}, ${4:/*...]*/})
+snippet	LV_Delete()
+	LV_Delete(${1:/*[RowNumber]*/})
+snippet	LV_DeleteCol()
+	LV_DeleteCol(${1:/*ColumnNumber*/})
+snippet	LV_GetCount()
+	LV_GetCount(${1:/*[\"S\"]*/})
+snippet	LV_GetNext()
+	LV_GetNext(${1:/*[StartingRowNumber*/}, ${2:/*\"C|F\"]*/})
+snippet	LV_GetText()
+	LV_GetText(${1:/*OutputVar*/}, ${2:/*RowNumber [*/}, ${3:/*ColumnNumber]*/})
+snippet	LV_Insert()
+	LV_Insert(${1:/*RowNumber [*/}, ${2:/*Options*/}, ${3:/*Col1*/}, ${4:/*Col2*/}, ${5:/*...]*/})
+snippet	LV_InsertCol()
+	LV_InsertCol(${1:/*ColumnNumber [*/}, ${2:/*Options*/}, ${3:/*ColumnTitle]*/})
+snippet	LV_Modify()
+	LV_Modify(${1:/*RowNumber*/}, ${2:/*Options [*/}, ${3:/*NewCol1*/}, ${4:/*NewCol2*/}, ${5:/*...]*/})
+snippet	LV_ModifyCol()
+	LV_ModifyCol(${1:/*[ColumnNumber*/}, ${2:/*Options*/}, ${3:/*ColumnTitle]*/})
+snippet	LV_SetImageList()
+	LV_SetImageList(${1:/*ImageListID} [, ${2:/*0|1|2]*/})
+snippet	Mod()
+	Mod(${1:/*Dividend*/}, ${2:/*Divisor*/})
+snippet	NumGet() [
+	NumGet(${1:/*VarOrAddress [*/}, ${2:/*Offset = 0*/}, ${3:/*Type = \"UInt\"]*/})
+snippet	NumPut()
+	NumPut(${1:/*Number*/}, ${2:/*VarOrAddress [*/}, ${3:/*Offset = 0*/}, ${4:/*Type = \"UInt\"]*/})
+snippet	OnMessage() [
+	OnMessage(${1:/*MsgNumber [*/}, ${2:/*\"FunctionName\"]*/})
+snippet	RegExMatch()
+	RegExMatch(${1:/*Haystack*/}, ${2:/*NeedleRegEx [*/}, ${3:/*UnquotedOutputVar = \"\"*/}, ${4:/*StartingPos = 1]*/})
+snippet	RegExReplace()
+	RegExReplace(${1:/*Haystack*/}, ${2:/*NeedleRegEx [*/}, ${3:/*Replacement = \"\"*/}, ${4:/*OutputVarCount = \"\"*/}, ${5:/*Limit = -1*/}, ${6:/*StartingPos = 1]*/})
+snippet	RegisterCallback()
+	RegisterCallback(\"${1:/*Functionname}\" [, ${2:/*Options = \"\"*/}, ${3:/*ParamCount = FormalCount*/}, ${4:/*EventInfo = Address]*/})
+snippet	Round()
+	Round(${1:/*Number [*/}, ${2:/*Places]*/})
+snippet	SB_SetIcon()
+	SB_SetIcon(${1:/*Filename [*/}, ${2:/*IconNumber*/}, ${3:/*PartNumber]*/})
+snippet	SB_SetParts()
+	SB_SetParts(${1:/*[Width*/}, ${2:/*Width2*/}, ${3:/*... Width255]*/})
+snippet	SB_SetText()
+	SB_SetText(${1:/*NewText [*/}, ${2:/*PartNumber*/}, ${3:/*Style]*/})
+snippet	Sin(Number)
+	Sin(${1:/*Number*/})
+snippet	Sqrt(Number)
+	Sqrt(${1:/*Number*/})
+snippet	StrLen(String)
+	StrLen(${1:/*String*/})
+snippet	SubStr(String
+	SubStr(${1:/*String*/}, ${2:/*StartingPos [*/}, ${3:/*Length]*/})
+snippet	Tan(Number)
+	Tan(${1:/*Number*/})
+snippet	TV_Add()
+	TV_Add(${1:/*Name*/}, ${2:/*[ParentItemID*/}, ${3:/*Options]*/})
+snippet	TV_Delete()
+	TV_Delete(${1:/*[ItemID]*/})
+snippet	TV_GetChild()
+	TV_GetChild(${1:/*ParentItemID*/})
+snippet	TV_GetCount()
+	TV_GetCount()
+snippet	TV_GetNext()
+	TV_GetNext(${1:/*[ItemID*/}, ${2:/*\"Checked | Full\"]*/})
+snippet	TV_Get()
+	TV_Get(${1:/*ItemID*/}, ${2:/*\"Expand | Check | Bold\"*/})
+snippet	TV_GetParent()
+	TV_GetParent(${1:/*ItemID*/})
+snippet	TV_GetPrev()
+	TV_GetPrev(${1:/*ItemID*/})
+snippet	TV_GetSelection()
+	TV_GetSelection()
+snippet	TV_GetText()
+	TV_GetText(${1:/*OutputVar*/}, ${2:/*ItemID*/})
+snippet	TV_Modify()
+	TV_Modify(${1:/*ItemID [*/}, ${2:/*Options*/}, ${3:/*NewName]*/})
+snippet	VarSetCapacity()
+	VarSetCapacity(${1:/*Var [*/}, ${2:/*RequestedCapacity*/}, ${3:/*FillByte]*/})
+snippet	WinActive()
+	WinActive(\"${1:/*WinTitle}\" [, \"${2:/*WinText}\", \"${3:/*ExcludeTitle}\", \"${4:/*ExcludeText]}\")
+snippet	WinExist()
+	WinExist(\"${1:/*WinTitle}\" [, \"${2:/*WinText}\", \"${3:/*ExcludeTitle}\", \"${4:/*ExcludeText]}\")
+
+#// Variables
+
+snippet	A_AhkPath
+	%A_AhkPath%
+snippet	A_AhkVersion
+	%A_AhkVersion%
+snippet	A_AppData
+	%A_AppData%
+snippet	A_AppDataCommon
+	%A_AppDataCommon%
+snippet	A_AutoTrim
+	%A_AutoTrim%
+snippet	A_BatchLines
+	%A_BatchLines%
+snippet	A_CaretX
+	%A_CaretX%
+snippet	A_CaretY
+	%A_CaretY%
+snippet	A_ComputerName
+	%A_ComputerName%
+snippet	A_ControlDelay
+	%A_ControlDelay%
+snippet	A_Cursor
+	%A_Cursor%
+snippet	A_DD
+	%A_DD%
+snippet	A_DDD
+	%A_DDD%
+snippet	A_DDDD
+	%A_DDDD%
+snippet	A_DefaultMouseSpeed
+	%A_DefaultMouseSpeed%
+snippet	A_Desktop
+	%A_Desktop%
+snippet	A_DesktopCommon
+	%A_DesktopCommon%
+snippet	A_DetectHiddenText
+	%A_DetectHiddenText%
+snippet	A_DetectHiddenWindows
+	%A_DetectHiddenWindows%
+snippet	A_EndChar
+	%A_EndChar%
+snippet	A_EventInfo
+	%A_EventInfo%
+snippet	A_ExitReason
+	%A_ExitReason%
+snippet	A_FormatFloat
+	%A_FormatFloat%
+snippet	A_FormatInteger
+	%A_FormatInteger%
+snippet	A_Gui
+	%A_Gui%
+snippet	A_GuiEvent
+	%A_GuiEvent%
+snippet	A_GuiControl
+	%A_GuiControl%
+snippet	A_GuiControlEvent
+	%A_GuiControlEvent%
+snippet	A_GuiHeight
+	%A_GuiHeight%
+snippet	A_GuiWidth
+	%A_GuiWidth%
+snippet	A_GuiX
+	%A_GuiX%
+snippet	A_GuiY
+	%A_GuiY%
+snippet	A_Hour
+	%A_Hour%
+snippet	A_IconFile
+	%A_IconFile%
+snippet	A_IconHidden
+	%A_IconHidden%
+snippet	A_IconNumber
+	%A_IconNumber%
+snippet	A_IconTip
+	%A_IconTip%
+snippet	A_Index
+	%A_Index%
+snippet	A_IPAddress1
+	%A_IPAddress%1
+snippet	A_IPAddress2
+	%A_IPAddress%2
+snippet	A_IPAddress3
+	%A_IPAddress%3
+snippet	A_IPAddress4
+	%A_IPAddress%4
+snippet	A_ISAdmin
+	%A_ISAdmin%
+snippet	A_IsCompiled
+	%A_IsCompiled%
+snippet	A_IsCritical
+	%A_IsCritical%
+snippet	A_IsPaused
+	%A_IsPaused%
+snippet	A_IsSuspended
+	%A_IsSuspended%
+snippet	A_KeyDelay
+	%A_KeyDelay%
+snippet	A_Language
+	%A_Language%
+snippet	A_LastError
+	%A_LastError%
+snippet	A_LineFile
+	%A_LineFile%
+snippet	A_LineNumber
+	%A_LineNumber%
+snippet	A_LoopField
+	%A_LoopField%
+snippet	A_LoopFileAttrib
+	%A_LoopFileAttrib%
+snippet	A_LoopFileDir
+	%A_LoopFileDir%
+snippet	A_LoopFileExt
+	%A_LoopFileExt%
+snippet	A_LoopFileFullPath
+	%A_LoopFileFullPath%
+snippet	A_LoopFileLongPath
+	%A_LoopFileLongPath%
+snippet	A_LoopFileName
+	%A_LoopFileName%
+snippet	A_LoopFileShortName
+	%A_LoopFileShortName%
+snippet	A_LoopFileShortPath
+	%A_LoopFileShortPath%
+snippet	A_LoopFileSize
+	%A_LoopFileSize%
+snippet	A_LoopFileSizeKB
+	%A_LoopFileSizeKB%
+snippet	A_LoopFileSizeMB
+	%A_LoopFileSizeMB%
+snippet	A_LoopFileTimeAccessed
+	%A_LoopFileTimeAccessed%
+snippet	A_LoopFileTimeCreated
+	%A_LoopFileTimeCreated%
+snippet	A_LoopFileTimeModified
+	%A_LoopFileTimeModified%
+snippet	A_LoopReadLine
+	%A_LoopReadLine%
+snippet	A_LoopRegKey
+	%A_LoopRegKey%
+snippet	A_LoopRegName
+	%A_LoopRegName%
+snippet	A_LoopRegSubkey
+	%A_LoopRegSubkey%
+snippet	A_LoopRegTimeModified
+	%A_LoopRegTimeModified%
+snippet	A_LoopRegType
+	%A_LoopRegType%
+snippet	A_MDAY
+	%A_MDAY%
+snippet	A_Min
+	%A_Min%
+snippet	A_MM
+	%A_MM%
+snippet	A_MMM
+	%A_MMM%
+snippet	A_MMMM
+	%A_MMMM%
+snippet	A_Mon
+	%A_Mon%
+snippet	A_MouseDelay
+	%A_MouseDelay%
+snippet	A_MSec
+	%A_MSec%
+snippet	A_MyDocuments
+	%A_MyDocuments%
+snippet	A_Now
+	%A_Now%
+snippet	A_NowUTC
+	%A_NowUTC%
+snippet	A_NumBatchLines
+	%A_NumBatchLines%
+snippet	A_OSType
+	%A_OSType%
+snippet	A_OSVersion
+	%A_OSVersion%
+snippet	A_PriorHotkey
+	%A_PriorHotkey%
+snippet	A_ProgramFiles
+	%A_ProgramFiles%
+snippet	A_Programs
+	%A_Programs%
+snippet	A_ProgramsCommon
+	%A_ProgramsCommon%
+snippet	A_ScreenHeight
+	%A_ScreenHeight%
+snippet	A_ScreenWidth
+	%A_ScreenWidth%
+snippet	A_ScriptDir
+	%A_ScriptDir%
+snippet	A_ScriptFullPath
+	%A_ScriptFullPath%
+snippet	A_ScriptName
+	%A_ScriptName%
+snippet	A_Sec
+	%A_Sec%
+snippet	A_Space
+	%A_Space%
+snippet	A_StartMenu
+	%A_StartMenu%
+snippet	A_StartMenuCommon
+	%A_StartMenuCommon%
+snippet	A_Startup
+	%A_Startup%
+snippet	A_StartupCommon
+	%A_StartupCommon%
+snippet	A_StringCaseSense
+	%A_StringCaseSense%
+snippet	A_Tab
+	%A_Tab%
+snippet	A_Temp
+	%A_Temp%
+snippet	A_ThisFunc
+	%A_ThisFunc%
+snippet	A_ThisHotkey
+	%A_ThisHotkey%
+snippet	A_ThisLabel
+	%A_ThisLabel%
+snippet	A_ThisMenu
+	%A_ThisMenu%
+snippet	A_ThisMenuItem
+	%A_ThisMenuItem%
+snippet	A_ThisMenuItemPos
+	%A_ThisMenuItemPos%
+snippet	A_TickCount
+	%A_TickCount%
+snippet	A_TimeIdle
+	%A_TimeIdle%
+snippet	A_TimeIdlePhysical
+	%A_TimeIdlePhysical%
+snippet	A_TimeSincePriorHotkey
+	%A_TimeSincePriorHotkey%
+snippet	A_TimeSinceThisHotkey
+	%A_TimeSinceThisHotkey%
+snippet	A_TitleMatchMode
+	%A_TitleMatchMode%
+snippet	A_TitleMatchModeSpeed
+	%A_TitleMatchModeSpeed%
+snippet	A_UserName
+	%A_UserName%
+snippet	A_WDay
+	%A_WDay%
+snippet	A_WinDelay
+	%A_WinDelay%
+snippet	A_WinDir
+	%A_WinDir%
+snippet	A_WorkingDir
+	%A_WorkingDir%
+snippet	A_YDay
+	%A_YDay%
+snippet	A_YEAR
+	%A_YEAR%
+snippet	A_YWeek
+	%A_YWeek%
+snippet	A_YYYY
+	%A_YYYY%
+snippet	Clipboard
+	%Clipboard%
+snippet	ClipboardAll
+	%ClipboardAll%
+snippet	ComSpec
+	%ComSpec%
+snippet	ErrorLevel
+	%ErrorLevel%
+snippet	ProgramFiles
+	%ProgramFiles%
+snippet	True
+	%True%
+snippet	False
+	%False%
