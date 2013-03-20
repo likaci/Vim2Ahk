@@ -18,7 +18,7 @@
 	运行和停止统一为F5
 	代码提示做成弹出菜单的形式
 	增加Debug功能
-
+---
 ##安装
 ###1.建议路径是 d:\Vim\
 	即 d:\
@@ -84,6 +84,6 @@
 最主要的功能全部有AhkSIDE实现,我只是稍作修改后各个插件的堆砌，修改后的ahkside在bundle\AhkSIDE\ 中   
 还有vim作者,各位插件作者  
 ##预览
-![](http://blog.xiazhiri.com/pic/vim2ahk.jpg)
----
+![](http://blog.xiazhiri.com/pic/vim2ahk.jpg)   
+   
 ##[更多信息](http://blog.xiazhiri.com/vim2ahk.html)
