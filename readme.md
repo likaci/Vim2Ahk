@@ -1,3 +1,24 @@
+##特性
+	F5 运行
+	F6 停止
+	F7 编译
+	F8 打开taglist 等
+	错误信息输出在vim窗口
+	代码补全
+	代码提示 *编辑模式下 F1
+	Alt-F1 查询光标处help.chm
+	ahk Snippet补全
+	ahk taglist
+
+##To do
+	<del>当脚本运行时信息窗口提示Running</del>
+	解决中文和特殊字符脚本无法运行
+	同时编辑多个脚本时F5 F6混乱
+	替换文件管理器为NERDTree
+	运行和停止统一为F5
+	代码提示做成弹出菜单的形式
+	增加Debug功能
+
 ##安装
 ###1.建议路径是 d:\Vim\
 	即 d:\
